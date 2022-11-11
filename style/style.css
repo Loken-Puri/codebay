@@ -1,0 +1,464 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* $primaryBtn: rgb(29, 219, 156); 
+$fontWhite: #fff;
+$showPassword: rgb(212, 209, 211);
+
+
+/* ============= Add Font ============= */
+@font-face {
+  font-family: myBold;
+  src: url(/asset/fonts/AdobeClean-Bold.otf);
+}
+
+@font-face {
+  font-family: myMedium;
+  src: url(/asset/fonts/AdobeClean-Medium.otf);
+}
+
+@font-face {
+  font-family: myRegular;
+  src: url(/asset/fonts/AdobeClean-Regular.otf);
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(/asset/fonts/ds-digital.otf);
+}
+
+/* ============= Body-background image ============= */
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
+  background-image: url(/asset/image/background-wall.jpg);
+}
+
+/* ============= Generate Button ============= */
+.mini {
+  height: 55vh;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pin__generator {
+  border: 5px solid #323235;
+  display: block;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #201e20;
+}
+
+.pin__generator input[type='text'] {
+  width: 50%;
+  color: black;
+  height: 30px;
+  padding: 10px;
+  font-size: 25px;
+  margin-top: 10px;
+  text-align: center;
+  pointer-events: auto;
+  font-family: myMedium;
+  border: 4px solid #dae0e4;
+}
+
+/* ============= Shaking Message on generate pin box ============= */
+#generateMessage {
+  margin: 0;
+  font-size: 16px;
+  margin-top: 15px;
+  border-radius: 8px;
+  color: #968787;
+}
+
+.generate__btn {
+  margin-bottom: 12px;
+}
+
+.mini .generateBtnSec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 22vh;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* ============= Side background of Pin pad ============= */
+.pin__pad {
+  margin-top: 50px;
+  padding: 0 32px;
+  background: #323235;
+  border-radius: 17px;
+}
+
+/* ============= Button-background 0-9 ============= */
+button {
+  padding: 0;
+  border-color: #33435a;
+  background: #302b2b;
+  color: white;
+  border-radius: 7px;
+  font-family: myBold;
+}
+
+.numbers {
+  font-size: 28px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  border: 0;
+  outline: 0;
+}
+
+/* ============= Save Button ============= */
+.save {
+  font-size: 24px;
+  background-color: #1ddb9c;
+  border-radius: 5px;
+  font-family: myMedium;
+}
+
+/* ============= Clear Button ============= */
+.clear {
+  font-size: 28px;
+  background-color: #d61e06;
+  border-radius: 5px;
+  font-family: myMedium;
+}
+
+
+/* ============= Middle Background of Pin pad ============= */
+table {
+  margin: auto;
+  display: block;
+  max-width: 300px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 35px;
+  background-color: #201e20;
+  margin-bottom: 10px;
+}
+
+thead tr td {
+  opacity: 1;
+  position: relative;
+  pointer-events: auto;
+}
+
+/* ============= Screen ============= */
+.input__container #inputPin {
+  border-radius: 6px;
+  width: 100%;
+  height: 70px;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 17px;
+  pointer-events: auto;
+}
+
+#inputPin {
+  font-family: myFont;
+}
+
+.input__container input:focus {
+  outline: 0;
+}
+
+td {
+  opacity: 0.8;
+  padding: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+}
+
+td:hover {
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transform: scale(2px);
+          transform: scale(2px);
+}
+
+tbody tr:first-child td {
+  pointer-events: auto;
+}
+
+tbody button {
+  height: 65px;
+  width: 65px;
+  font-size: 45px;
+  margin-left: 1px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main {
+  z-index: 9;
+}
+
+/* ============= Media Query for Small device ============= */
+@media only screen and (max-width: 425px) {
+  .main {
+    margin-bottom: 20%;
+  }
+  .mini {
+    margin-top: 100px;
+  }
+  .mini .generateBtnSec {
+    margin-top: 5%;
+  }
+  .generateBtnSec .generate__btn {
+    margin-bottom: 10%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mini .generateBtnSec {
+    min-height: 25vh;
+  }
+  .pin__generator input[type='text'] {
+    width: 80%;
+    margin-top: 15%;
+  }
+}
+
+/* ============= Background blur when Notification appears ============= */
+.generate__btn {
+  border: none;
+  outline: none;
+  padding: 6px 12px;
+  color: #cbcee7;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 550;
+  position: relative;
+  background-color: #b91818;
+  letter-spacing: 1.3px;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-family: myBold;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 24px rgba(3, 150, 222, 0.64);
+          box-shadow: 0 0 24px rgba(3, 150, 222, 0.64);
+}
+
+.pin__generator button:hover,
+.pin__generator button:focus {
+  color: #fff;
+  background-color: #1ddb9c;
+}
+
+@media only screen and (max-width: 575px) {
+  .pin__generator {
+    width: 100%;
+    height: 90%;
+    margin-top: 365px;
+    margin-bottom: 80%;
+  }
+}
+
+/* ============= Background blur when Notification appears ============= */
+#notify__content {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  display: none;
+  position: fixed;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ============= Attempt alert dialog box ============= */
+.notify__section {
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  padding: 3px 50px;
+  position: fixed;
+  font-size: 20px;
+  min-width: 250px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgba(243, 180, 6, 0.815);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.notify__section p {
+  margin: 0;
+}
+
+.notify__section #unmatched,
+.notify__section #matched {
+  display: none;
+}
+
+.notify__section button {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  padding: 3px 15px;
+  border-radius: 5px;
+  font-family: myRegular;
+  background-color: #eff0eb;
+}
+
+.notify__section button:hover {
+  background-color: #2e3b0e;
+}
+
+/* ============= Shaking alert text ============= */
+.shake {
+  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+  100% {
+    color: #ed5249;
+    -webkit-transition: 5s ease all;
+    transition: 5s ease all;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+  100% {
+    color: #ed5249;
+    -webkit-transition: 5s ease all;
+    transition: 5s ease all;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ============= Reload page ============= */
+.reaload {
+  margin: 0;
+  top: 70%;
+  left: 50%;
+  z-index: 9;
+  display: none;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.policia {
+  width: 250px;
+  height: 40px;
+  border: 2px solid red;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  background-color: red;
+  border-radius: 5px;
+  padding-top: 3px;
+  }
+
+
+/* ============= Show & hide pin code ============= */
+.fa-eye {
+  position: absolute;
+  top: 33%;
+  right: 4%;
+  cursor: pointer;
+  color: #d4d1d3;
+}
+
+.fa-eye-slash {
+  position: absolute;
+  top: 33%;
+  right: 4%;
+  cursor: pointer;
+  color: #d4d1d3;
+}
+/*# sourceMappingURL=style.css.map */

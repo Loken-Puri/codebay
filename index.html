@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pin Pad </title>
+    <script src="https://kit.fontawesome.com/3e972e342e.js" crossorigin="anonymous"></script>
+    <link href="/style/style.css" rel="stylesheet" />
+</head>
+
+<body onload="welcome()">
+    <div class="container">
+        <div class="row">
+                <div class="mini">
+                    <div class="pin__generator">
+                        <input id="generateNum" class="form-control" type="text" placeholder="Your Pin" value="">
+                        <p id="generateMessage"></p>
+                        <div class="generateBtnSec">
+                            <button class="generate__btn" onclick="randomNumFun()"> <span>Create & Save Pin</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="mini">
+                    <div class="input-numberSection">
+                        <div class="pin__pad">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td colspan="4">
+                                            <div class="input__container">
+                                                <input id="inputPin" type="password" placeholder="Password" />
+                                                <i class="fa-solid fa-eye-slash" id="eye"></i>                                           
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text" colspan="4" id="textMessage"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button class="numbers" type="button" id="7" onclick="btnKey(7)">7</button>
+                                        </td>
+                                        <td>
+                                            <button class="numbers" type="button" id="8" onclick="btnKey(8)">8</button>
+                                        </td>
+                                        <td>
+                                            <button class="numbers" type="button" id="9" onclick="btnKey(9)">9</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button class="numbers" type="button" id="4" onclick="btnKey(4)">4</button>
+                                        </td>
+                                        <td>
+                                            <button class="numbers" type="button" id="5" onclick="btnKey(5)">5</button>
+                                        </td>
+                                        <td>
+                                            <button class="numbers" type="button" id="6" onclick="btnKey(6)">6</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button class="numbers" type="button" id="1" onclick="btnKey(1)">1</button>
+                                        </td>
+                                        <td>
+                                            <button class="numbers" type="button" id="2" onclick="btnKey(2)">2</button>
+                                        </td>
+                                        <td>
+                                            <button class="numbers" type="button" id="3" onclick="btnKey(3)">3</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button class="clear" type="button" onclick="cleanLast()">C</button>
+                                        </td>
+                                        <td>
+                                            <button class="numbers" type="button" id="0" onclick="btnKey(0)">0</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="save submit-btn"  id="submit" onclick="submitBtn()">Save</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="loading">
+                <div class="reaload" id="reaload">
+                    <a href="javascript:location.reload(true)">
+                        <p class="policia">https://policia.es/</p>
+                    </a>
+                </div>
+            </div>
+            <div class="loading" id="notify__content">
+                <div class="notify__section">
+                    <p class="notify" id="unmatched">!El pin no es correcto, te quedan. </p>
+                    <p class="notify" id="tryContent"> <span id="tryLeft">3</span>intentos!</p>
+                    <p class="notify" id="matched">✅ https://www.codebayinnomation.com/</p>
+                    <button type="button" onclick="notifyContent()">❌</button>
+                </div>
+        </div>
+    </div>
+    <script src="/script.js" type="text/javascript"></script>
+</body>
+</html>
