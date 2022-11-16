@@ -412,8 +412,8 @@ tbody button {
   }
 }
 
-/* ============= Reload page ============= */
-.reaload {
+/* ============= Show message ============= */
+.showMessage {
   margin: 0;
   top: 70%;
   left: 50%;

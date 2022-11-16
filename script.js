@@ -84,7 +84,7 @@ function tryLeft(id) {
     document.getElementById(id).innerHTML -= 1;
     if (tryAgain == "1") {
         disableBtn('submit');
-        reaload();
+        showMessage();
     }
 }
 
@@ -98,9 +98,9 @@ function disableBtn(id) {
 }
 
 
-// Reaload
-function reaload() {
-    let refresh = document.getElementById('reaload');
+// Show - message
+function showMessage() {
+    let refresh = document.getElementById('showMessage');
     refresh.style.display = "block";
 }
 

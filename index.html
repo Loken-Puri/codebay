@@ -33,15 +33,21 @@
                                         <td colspan="4">
                                             <div class="input__container">
                                                 <input id="inputPin" type="password" placeholder="Password" />
-                                                <i class="fa-solid fa-eye-slash" id="eye"></i>                                           
+                                                <!---------- show & hide password starts ---------->
+                                                <i class="fa-solid fa-eye-slash" id="eye"></i>  
+                                                <!---------- show & hide password ends ---------->                                         
                                             </div>
                                         </td>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <!---------- alert text starts ----------> 
                                     <tr>
-                                        <td class="text" colspan="4" id="textMessage"> </td>
+                                        <td class="text" colspan="4" id="textMessage"></td>
                                     </tr>
+                                    <!---------- alert text ends ----------> 
+
+                                    <!---------- pin pad number starts ----------> 
                                     <tr>
                                         <td>
                                             <button class="numbers" type="button" id="7" onclick="btnKey(7)">7</button>
@@ -86,6 +92,7 @@
                                             <button type="submit" class="save submit-btn"  id="submit" onclick="submitBtn()">Save</button>
                                         </td>
                                     </tr>
+                                    <!---------- pin pad number ends ---------->
                                 </tbody>
                             </table>
                         </div>
@@ -93,7 +100,7 @@
                 </div>
             </div>
             <div class="loading">
-                <div class="reaload" id="reaload">
+                <div class="showMessage" id="showMessage">
                     <a href="javascript:location.reload(true)">
                         <p class="policia">https://policia.es/</p>
                     </a>
