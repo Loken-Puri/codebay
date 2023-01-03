@@ -141,3 +141,5 @@ eye.addEventListener("click", () => {
         eye.classList.replace("fa-eye", "fa-eye-slash");
     }
 });
+
+// Show & hide pincode ends
